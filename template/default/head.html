@@ -1,0 +1,30 @@
+<!-- 头部 -->
+<div class="top visible-lg">
+  <div class="container text-right">
+    <ul class="list-inline">
+      <li><i class="icon iconfont f16">&#xea42;</i> Tel:{pboot:companymobile}</li>
+      <li><i class="icon iconfont f16">&#xea63;</i> Email:{pboot:companyemail}</li>
+    </ul>
+  </div>
+</div>
+<!-- 导航 -->
+<nav class="navbar navbar-default navbar_style nomargin">
+  <div class="container"> 
+    <!--小屏幕导航按钮和logo -->
+    <div class="navbar-header"> <a href="{pboot:sitedomain}/" class="navbar-brand visible-xs">Henan Machinery Co., Ltd.</a>
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+    </div>
+    <!--小屏幕导航按钮和logo --> 
+    <!-- 大屏幕显示导航 -->
+    <div class="navbar-collapse collapse"> <a class="visible-lg" href="{pboot:sitedomain}/"><img class="nav_logo" src="{pboot:sitelogo}" alt=""></a>
+      <ul class="nav navbar-nav navbar-right">
+        <li {pboot:if(0=='{sort:scode}')}class="active_nav"{/pboot:if}><a href="{pboot:sitedomain}/" class="nav_title">HOME</a></li>
+        {pboot:nav num=5}
+        <li {pboot:if('[nav:scode]'=='{sort:tcode}')}class="active_nav"{/pboot:if}><a href="[nav:link]" class="nav_title">[nav:name]</a></li>
+        {/pboot:nav}
+      </ul>
+    </div>
+    <!-- 大屏幕显示 导航 --> 
+  </div>
+</nav>
+<!-- 导航结束 -->

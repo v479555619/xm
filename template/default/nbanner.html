@@ -1,0 +1,22 @@
+<!-- banner -->
+<div class="banner">{pboot:sort scode={sort:tcode}}<img class="img-responsive" src="[sort:pic]" alt="">{/pboot:sort}</div>
+<!-- search -->
+<section id="search">
+  <div class="container">
+    <div class="clear">
+      <div class="pull-left visible-lg">
+        <ol class="breadcrumb">
+          Position:{pboot:position indextext=Home}
+        </ol>
+      </div>
+      <div class="pull-right">
+        <div class="form-group has-feedback footer_style">
+          <form action="{pboot:scaction}" method="get">
+            <input name='keyword' type="text" class="form-control" placeholder="Search">
+            <i class="icon iconfont form-control-feedback">&#xe650;</i>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

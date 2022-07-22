@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link href="{pboot:sitedomain}/skin/css/bootstrap.min.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/iconfont.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/demo.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/base.css" rel="stylesheet">
+<!--[if lt IE 9]>
+ <script src="{pboot:sitedomain}/skin/js/html5shiv.min.js"></script>
+ <script src="{pboot:sitedomain}/skin/js/respond.min.js"></script>
+ <![endif]-->
+</head>
+<body>
+{include file=head.html}
+{include file=nbanner.html}
+<!-- adress -->
+<section id="adress">
+  <div class="container">
+    <div class="col-sm-5">
+      <div class="adress_bg"> <img class="img-responsive" src="{pboot:sitedomain}/skin/images/contact_bg.png" alt=""> <span></span>
+        <div class="adress_nrbg">
+          <ul>
+            <li><i class="icon iconfont">&#xe62d;</i>Adrress：No. 88, Xuanwu Lake, Xuanwu District, Nanjing</li>
+            <li><i class="icon iconfont">&#xea42;</i>Tel：{pboot:companymobile}</li>
+            <li><i class="icon iconfont">&#xea53;</i>Mail：{pboot:companyemail}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-7">
+      <p class="adress_title">Contact us</p>
+      <form method="post" name="addcontact" action="{pboot:msgaction}">
+        <input type="text" class="form-control input-lg" placeholder="contacts" name="contacts" required>
+        <input type="text" class="form-control input-lg" placeholder="mobile" name="mobile" required>
+        <input type="text" class="form-control input-lg" placeholder="email" name="email" required>
+        <input type="text" class="form-control input-lg" placeholder="Please leave your needs, we will contact you as soon as possible" name="content">
+        <button class="btn pull-right">Submit</button>
+      </form>
+    </div>
+    <div class="clear"></div>
+  </div>
+</section>
+{include file=foot.html}
+</body>
+</html>

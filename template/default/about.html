@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link href="{pboot:sitedomain}/skin/css/bootstrap.min.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/iconfont.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/demo.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/base.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="{pboot:sitedomain}/skin/js/html5shiv.min.js"></script>
+      <script src="{pboot:sitedomain}/skin/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+{include file=head.html}
+{include file=nbanner.html}
+<!-- company profile -->
+<section id="gsjj">
+  <div class="container">
+   {content:content}
+  </div>
+</section>
+<!-- — Corporate Style — -->
+{pboot:sort scode=11}
+<section id="corporate_style">
+  <div class="corporate_style">
+    <p class="text-center">— [sort:name] —</p>
+    <div class="container style">
+      {pboot:list scode=[sort:scode] num=4 order=sorting}
+      <div class="col-sm-3 col-xs-3"><img class="img-responsive" src="[list:ico]" alt="[list:title]"></div>
+      {/pboot:list}
+    </div>
+  </div>
+</section>
+{/pboot:sort}
+<!-- — Why choose us — -->
+<section id="choose_us">
+  <h3 class="text-center">— Why choose us —</h3>
+  <p class="text-center">we are the pioneers of the foreign trade industry</p>
+  <div align="center" class="container nopadding">
+    <div class="clear">
+      <div class="pull-left">we have already served 1000+companies,get a lot of customers</div>
+      <div class="pull-right">we have independent technology research and development team</div>
+    </div>
+    <div class="clear">
+      <div class="pull-left">most authoritativeforeigntrade Machinery Co., Ltd.</div>
+      <div class="pull-right choose_4">product raw materials have quality assurance, products are guaranteed</div>
+    </div>
+  </div>
+  <p class="text-center choose_end">we have a professional after-sales service team, 24 hours online to solve customer problems</p>
+</section>
+<!-- — Qualification honor — -->
+{pboot:sort scode=12}
+<section id="honor">
+  <p class="honor_title">— [sort:name] —</p>
+  <div align="center" class="container">
+    {pboot:list scode=[sort:scode] num=3 order=sorting}
+    <div class="col-sm-4 col-xs-4"><img class="img-responsive" src="[list:ico]" alt="[list:title]"></div>
+    {/pboot:list}
+  </div>
+</section>
+{/pboot:sort}
+<!--youshi-->
+<section id="youshi">
+  <div class="container">
+    <div class="w_20"><img class="img-responsive" src="{pboot:sitedomain}/skin/images/ab1.png" alt="">
+      <p class="visible-lg">Focus on foreign tradeIndustry for many years</p>
+    </div>
+    <div class="w_20"><img class="img-responsive" src="{pboot:sitedomain}/skin/images/ab2.png" alt="">
+      <p class="visible-lg">Customer first responsibility</p>
+    </div>
+    <div class="w_20"><img class="img-responsive" src="{pboot:sitedomain}/skin/images/ab3.png" alt="">
+      <p class="visible-lg">Supply the most favorable price</p>
+    </div>
+    <div class="w_20"><img class="img-responsive" src="{pboot:sitedomain}/skin/images/ab4.png" alt="">
+      <p class="visible-lg">Safe, reliable, convenient and efficient</p>
+    </div>
+    <div class="w_20"><img class="img-responsive" src="{pboot:sitedomain}/skin/images/ab5.png" alt="">
+      <p class="visible-lg">provide the mostsatisfying after sales service</p>
+    </div>
+  </div>
+</section>
+{include file=foot.html}
+</body>
+</html>

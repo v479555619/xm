@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link href="{pboot:sitedomain}/skin/css/bootstrap.min.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/iconfont.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/demo.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/base.css" rel="stylesheet">
+<!--[if lt IE 9]>
+ <script src="{pboot:sitedomain}/skin/js/html5shiv.min.js"></script>
+ <script src="{pboot:sitedomain}/skin/js/respond.min.js"></script>
+ <![endif]-->
+</head>
+<body>
+{include file=head.html}
+{include file=nbanner.html}
+<section id="case">
+  <div class="container">
+    <div class="col-sm-9">
+      <div class="col-sm-12 nopadding">
+        {pboot:list num=6 order=sorting}
+        <div class="col-sm-6">
+          <div class="thumbnail"> <a href="[list:link]"><img src="[list:ico]"></a>
+            <div class="caption">
+              <h4>[list:title]</h4>
+              <p>[list:description lencn=50]</p>
+              <p><a href="[list:link]" class="btn" role="button">Read more &nbsp;<img src="{pboot:sitedomain}/skin/images/jia.png" alt=""></a></p>
+            </div>
+          </div>
+        </div>
+        {/pboot:list}
+        
+      </div>
+      {pboot:if({page:rows}>0)}
+      <div class="pagebar">
+        <div class="pagination">
+          <a class="page-item page-link st" href="{page:pre}" title="上一页"><<</a>
+          {page:numbar}
+          <a class="page-item page-link" href="javascript:;" title="当前页/总页数">{page:current}/{page:count}</a>
+          <a class="page-item page-link st" href="{page:next}" title="下一页">>></a>
+        </div>
+      </div>	
+    {else}
+      <div class="tac text-secondary">No Data</div>
+    {/pboot:if}
+    </div>
+    <div class="col-sm-3">
+      <p class="case_title">Hot products</p>
+      <ul>
+        {pboot:list scode=2 num=4 order=sorting}
+          <li> <a href="[list:link]">
+            <div class="case_cp"><img src="[list:ico]" width="100%"></div>
+            <p>[list:title]</p>
+            </a> </li>
+            {/pboot:list}
+      </ul>
+      <div class="contact_all">
+        <p>Tel:<span>{pboot:companymobile}</span></p>
+        <p>E-mail:<span>{pboot:companyemail}</span></p>
+        <img src="{pboot:sitedomain}/skin/images/case_13.png" alt=""> </div>
+    </div>
+  </div>
+</section>
+{include file=foot.html}
+</body>
+</html>

@@ -1,0 +1,56 @@
+<section id="footer">
+  <div class="container">
+    <div class="col-sm-6 fl6">
+      <form action="{pboot:msgaction}" method="post">
+        <div class="form-group has-feedback footer_style">
+          <input type="text" name="contacts" class="form-control" placeholder="your name" required>
+          <i class="icon iconfont form-control-feedback">&#xea59;</i> </div>
+        <div class="form-group has-feedback footer_style">
+          <input type="text" name="email" class="form-control" placeholder="E-mail" required>
+          <i class="icon iconfont form-control-feedback">&#xea63;</i> </div>
+        <div class="form-group has-feedback footer_style">
+          <input type="text" name="mobile" class="form-control" placeholder="Phone" required>
+          <i class="icon iconfont form-control-feedback">&#xea44;</i> </div>
+        <div class="form-group has-feedback footer_style">
+          <textarea class="form-control" name="content" rows="3" placeholder="Require"></textarea>
+          <i class="icon iconfont form-control-feedback">&#xea5f;</i> </div>
+        <button type="submit" class="btn pull-right">Submit</button>
+      </form>
+    </div>
+    <div class="col-sm-6 fr6">
+      <p>CONTACT US</p>
+      <ul class="list-unstyled mt30">
+        <li>Phone:{pboot:companyphone} / {pboot:companymobile}</li>
+        <li>E-mail : {pboot:companyemail}</li>
+        <li>Fax : {pboot:companyfax}</li>
+        <li>Address : {pboot:companyaddress}</li>
+        <li>{pboot:sitecopyright}</li>
+        <li>Icp Number : {pboot:siteicp}</li>
+        <li><a href="{pboot:sitedomain}/sitemap.xml" target="_blank">XML地图</a>  <a href="https://www.adminbuy.cn/" target="_blank">pbootcms模板</a>  {pboot:sitestatistical}</li>
+        <li>
+          <ul class="list-inline">
+            <li><a href="http://wpa.qq.com/msgrd?v=3&uin={pboot:companyqq}&site=qq&menu=yes"><img src="{pboot:sitedomain}/skin/images/qq.png" alt=""></a></li>
+            <li><a href="mailto:{pboot:companyemail}"><img src="{pboot:sitedomain}/skin/images/message.png" alt=""></a></li>
+            <li><a href="tel:{pboot:companymobile}"><img src="{pboot:sitedomain}/skin/images/phone.png" alt=""></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- 开始写代码 --> 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="{pboot:sitedomain}/skin/js/jquery-3.1.1.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="{pboot:sitedomain}/skin/js/bootstrap.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+  /*小屏幕导航点击关闭导航菜单*/
+    if(screen.width<1170){
+      $(".navbar-collapse a").click(function(){
+      $(".navbar-collapse").collapse("hide");
+      });  
+    };
+
+})
+</script>

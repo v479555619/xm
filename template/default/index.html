@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="author" content="www.adminbuy.cn K244" />
+<link href="{pboot:sitedomain}/skin/css/bootstrap.min.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/index.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/style.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/iconfont.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/demo.css" rel="stylesheet">
+<link href="{pboot:sitedomain}/skin/css/base.css" rel="stylesheet">
+<!--[if lt IE 9]>
+ <script src="{pboot:sitedomain}/skin/js/html5shiv.min.js"></script>
+ <script src="{pboot:sitedomain}/skin/js/respond.min.js"></script>
+ <![endif]-->
+</head>
+<body>
+{include file=head.html}
+<div class="banner"> <img class="img-responsive" src="{label:banner}" alt="">
+  <div class="container banner_js visible-lg">
+    <div class="col-sm-12 nopadding">
+      <div class="col-sm-4">①The Reducer most Top companies In The World</div>
+      <div class="col-sm-4">②The Reducer most Top companies In The World</div>
+      <div class="col-sm-4 pull-right">③The Reducer most Top companies In The World</div>
+    </div>
+  </div>
+</div>
+<!-- in order to better provide quality product -->
+<section id="do_better">
+  <div class="container nopadding">
+    <div class="col-sm-4 border pt15 pb15"><img class="img-responsive" src="{pboot:sitedomain}/skin/images/index_05.jpg" alt=""></div>
+    <div class="col-sm-8 pl40"> <strong class="text-uppercase zhuse">IN ORDER TO BETTER PROVIDE QUALITY PRODUCT</strong>
+      <div class="bs-example pl20">
+        <ul>
+          <li> K series reducer has a high technological content, a combination of helical gears and worm gear drive together ，C series reducer has a high technological content</li>
+          <li> K series reducer has a high technological content, a combination of helical gears and worm gear ……</li>
+          <li> K series reducer has a high technological content, a combination of helical gears and worm gear drive together ，has a high technological content</li>
+        </ul>
+      </div>
+      <div class="tip">
+        <ul class="list-inline">
+          <li><img class="ml5" src="{pboot:sitedomain}/skin/images/index_08.png" alt=""></li>
+          <li><img src="{pboot:sitedomain}/skin/images/index_10.png" alt=""></li>
+          <li><img src="{pboot:sitedomain}/skin/images/index_12.png" alt=""></li>
+          <li><img src="{pboot:sitedomain}/skin/images/index_14.png" alt=""></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- about us -->
+{pboot:sort scode=1}
+<section id="about_us">
+  <div class="col-sm-6 zhu_bg nopadding">
+    <div class="us_details pull-right">
+      <div class="us_nr">
+        <p>— [sort:name] —</p>
+        {pboot:content id=18}
+        <p>[content:content drophtml=1 dropblank=1 len=550 more='...']</p>
+        {/pboot:content}
+        <a href="[sort:link]" class="btn" role="button">more</a> </div>
+      <div class="about_tip visible-lg">
+        <div class="tip"> {pboot:companyname}<span></span></div>
+        <br>
+        <p class="text-uppercase">Enterprise vision</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 nopadding"><img src="[sort:ico]" alt=""></div>
+</section>
+{/pboot:sort}
+
+<!-- product -->
+{pboot:sort scode=2}
+<section id="product">
+  <div class="container">
+    <p class="pro_title zhuse"><strong>— [sort:name]—</strong></p>
+    {pboot:list scode=[sort:scode] num=6 order=sorting}
+    <div class="col-sm-4 col-xs-6">
+      <div class="pro_box"><a href="[list:link]"><img src="[list:ico]" width="100%"></a></div>
+      <div class="caption"> <strong class="db"><a href="[list:link]">[list:title]</a></strong>
+        <p>[list:description lencn=46]</p>
+        <p><a href="[list:link]" class="btn btn-huang" role="button">Read more</a></p>
+      </div>
+    </div>
+    {/pboot:list}
+  </div>
+</section>
+{/pboot:sort}
+
+<!-- news -->
+{pboot:sort scode=9}
+<section id="news">
+  <div class="container">
+    <p class="pro_title zhuse"><strong>— [sort:name] —</strong></p>
+    <div class="col-sm-6"><img src="[sort:ico]" width="100%" alt=""></div>
+    <div class="col-sm-6">
+      {pboot:list scode=[sort:scode] num=3 order=sorting}
+      <div class="media"> <a class="media-left" href="[list:link]"> 0[list:i] </a>
+        <div class="media-body"> <a href="[list:link]">
+          <h4 class="media-heading zhuse"><strong>[list:title]</strong></h4>
+          </a> [list:description lencn=86] </div>
+      </div>
+      {/pboot:list}
+    </div>
+  </div>
+</section>
+{/pboot:sort}
+{include file=foot.html}
+</body>
+</html>
